@@ -81,7 +81,7 @@ select
 	
 select 
 	case
-		when budget_usd < 10000000 then 'Min_budget'
+		hen bwudget_usd < 10000000 then 'Min_budget'
 		when budget_usd between 10000000 and 50000000 then 'Median_budget' 
 		else 'Max_budget'
 		end as budget_category,
@@ -143,7 +143,12 @@ select
 	order by avg_profit desc;
 		
 
-
+select
+	decade,
+	max(vote_count),
+	sum(vote_count)
+	from movie
+	group by decade;
 
 
 
